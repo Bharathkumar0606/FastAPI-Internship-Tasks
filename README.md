@@ -14,6 +14,155 @@ This repository contains a collection of FastAPI projects completed as part of m
 * Uvicorn
 * REST APIs
 * Swagger UI
+* ## Installation and Setup
+
+### Prerequisites
+
+Make sure the following are installed:
+
+* Python 3.10 or higher
+* PostgreSQL (for Task 4)
+* Git
+* VS Code (Recommended)
+
+---
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/Bharathkumar0606/FastAPI-Internship-Tasks.git
+```
+
+```bash
+cd FastAPI-Internship-Tasks
+```
+
+---
+
+### Create a Virtual Environment
+
+Windows:
+
+```bash
+python -m venv venv
+```
+
+Activate Virtual Environment:
+
+```bash
+venv\Scripts\activate
+```
+
+---
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Running the Projects
+
+### Task 1 – Student API
+
+Navigate to the folder containing `main.py`.
+
+```bash
+python -m uvicorn main:app --reload
+```
+
+Swagger Documentation:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+---
+
+### Task 2 – Product Management API
+
+```bash
+python -m uvicorn product_api:app --reload
+```
+
+Swagger Documentation:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+---
+
+### Task 3 – Student Course API
+
+```bash
+python -m uvicorn student_course_api:app --reload
+```
+
+Swagger Documentation:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+---
+
+### Task 4 – Library Management System API
+
+Navigate to the `library_api` folder.
+
+```bash
+cd library_api
+```
+
+Run the application:
+
+```bash
+python -m uvicorn main:app --reload
+```
+
+Swagger Documentation:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+---
+
+## PostgreSQL Setup (Task 4)
+
+Create a database:
+
+```sql
+CREATE DATABASE library_db;
+```
+
+Update the database connection string in `database.py`:
+
+```python
+DATABASE_URL = "postgresql://postgres:your_password@localhost/library_db"
+```
+
+Start the FastAPI server and access the API documentation through Swagger UI.
+
+---
+
+## API Testing
+
+All APIs can be tested using:
+
+* Swagger UI
+* Postman
+* Browser (for GET requests)
+
+Swagger URL:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
 
 ---
 
